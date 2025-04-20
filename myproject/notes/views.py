@@ -11,11 +11,11 @@ from django.shortcuts import get_object_or_404
 class NoteListCreateView(APIView):
     def get(self, request):
         notes = Note.objects.all()
-        serializer = NoteSerializer(notes, many=True)
+        serializer = NoteSerializer(notes, many=True, context={'request': request})
         return Response(serializer.data)
 
     def post(self, request):
-        serializer = NoteSerializer(data=request.data)
+        serializer = NoteSerializer(data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
