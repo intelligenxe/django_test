@@ -3,3 +3,38 @@
 db.sqlite3
 *.pyc
 __pycache__/
+
+# # Static asset build output
+# /static/
+# /staticfiles/
+# /build/
+# /dist/
+
+# # Python
+#__pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
+# *.pyc
+
+# # Django
+# db.sqlite3
+# *.log
+# *.pot
+# *.pyc
+# *.mo
+# *.swp
+
+# # VS Code
+# .vscode/
+
+# # OS files
+# .DS_Store
+# Thumbs.db
+
+# # Migrations
+# **/migrations/
+# !**/migrations/__init__.py
+myproject/notes/migrations/0001_initial.py
+myproject/notes/migrations/0002_note_image.py
+myproject/myproject/__pycache__/settings.cpython-312.pyc
